@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -15,6 +15,12 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PaymentAPI.Application\PaymentAPI.Application.csproj" />
+    <ProjectReference Include="..\PaymentAPI.Domain\PaymentAPI.Domain.csproj" />
+    <ProjectReference Include="..\PaymentAPI.Infrastructure\PaymentAPI.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

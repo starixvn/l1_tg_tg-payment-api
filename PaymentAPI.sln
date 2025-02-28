@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentAPI", "PaymentAPI\PaymentAPI.csproj", "{B933CF92-ABEB-40F1-806E-B6DD034DD4F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentAPI.Presentation", "PaymentAPI.Presentation\PaymentAPI.Presentation.csproj", "{0EF9CDDD-29E0-3263-AB02-1E969403CE00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentAPI.Infrastructure", "PaymentAPI.Infrastructure\PaymentAPI.Infrastructure.csproj", "{4C52B8A1-06B7-4496-954F-6FA14BDECAE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentAPI.Application", "PaymentAPI.Application\PaymentAPI.Application.csproj", "{33B2EBCC-716E-44ED-8BDA-104A28575535}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentAPI.Domain", "PaymentAPI.Domain\PaymentAPI.Domain.csproj", "{DFF5A3E0-7D7D-40AF-B3BC-5CCF272B17DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B933CF92-ABEB-40F1-806E-B6DD034DD4F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B933CF92-ABEB-40F1-806E-B6DD034DD4F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B933CF92-ABEB-40F1-806E-B6DD034DD4F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B933CF92-ABEB-40F1-806E-B6DD034DD4F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EF9CDDD-29E0-3263-AB02-1E969403CE00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EF9CDDD-29E0-3263-AB02-1E969403CE00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EF9CDDD-29E0-3263-AB02-1E969403CE00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EF9CDDD-29E0-3263-AB02-1E969403CE00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C52B8A1-06B7-4496-954F-6FA14BDECAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C52B8A1-06B7-4496-954F-6FA14BDECAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C52B8A1-06B7-4496-954F-6FA14BDECAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C52B8A1-06B7-4496-954F-6FA14BDECAE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33B2EBCC-716E-44ED-8BDA-104A28575535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33B2EBCC-716E-44ED-8BDA-104A28575535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33B2EBCC-716E-44ED-8BDA-104A28575535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33B2EBCC-716E-44ED-8BDA-104A28575535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFF5A3E0-7D7D-40AF-B3BC-5CCF272B17DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF5A3E0-7D7D-40AF-B3BC-5CCF272B17DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF5A3E0-7D7D-40AF-B3BC-5CCF272B17DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF5A3E0-7D7D-40AF-B3BC-5CCF272B17DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
