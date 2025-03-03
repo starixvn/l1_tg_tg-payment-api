@@ -1,4 +1,9 @@
+using PaymentAPI.Infrastructure.Services.Logging;
+using PaymentAPI.Infrastructure.Services.Logging.Configuration;
 using Sentry.AspNetCore;
+using PaymentAPI.Infrastructure.Services.Logging.Middleware;
+using PaymentAPI.Infrastructure.Databases.Configurations.MongoDb;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +16,12 @@ builder.Services.Configure<RouteOptions>(options =>
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.Services.AddHealthChecks();  
+builder.Services.AddHealthChecks();
+
+//builder.Services.AddMongoDb(builder.Configuration);
+
+//builder.Services.AddApiLoggingService(builder.Configuration, options => 
+//    builder.Configuration.GetSection("ApiLoggingSettings").Bind(options));
 
 var app = builder.Build();
 
@@ -22,6 +32,8 @@ var app = builder.Build();
 //}
 
 app.MapOpenApi();
+
+//app.UseMiddleware<ApiLoggingMiddleware>();
 
 app.UseHttpsRedirection();
 

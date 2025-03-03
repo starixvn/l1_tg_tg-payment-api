@@ -27,6 +27,8 @@ public class PlayerController : ControllerBase
         try
         {
             // TODO: Implement business logic to get deposit addresses
+            // Query all payment provider information: Internal DB
+            // Get deposit addresses for player: External API
             return Ok(new GetPlayerDepositAddressesResponse { Data = new List<PlayerDepositAddress>() });
         }
         catch (Exception ex)
