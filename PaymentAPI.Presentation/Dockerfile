@@ -1,6 +1,6 @@
-FROM hub.lumigame.com/base/dotnet/core/sdk:9.0-alpine AS build
+FROM hub.lumigame.com/base/dotnet/core/sdk:9.0-alpine AS builder
 WORKDIR /src
-COPY ["PaymentAPI.Presentation/PaymentAPI.Presentation.csproj", "PaymentAPI.Presentation/"]
+COPY ["./PaymentAPI.Presentation/PaymentAPI.Presentation.csproj", "./PaymentAPI.Presentation/"]
 RUN dotnet restore "./PaymentAPI.Presentation/PaymentAPI.Presentation.csproj"
 COPY . .
 WORKDIR "/src/PaymentAPI.Presentation"
@@ -10,5 +10,5 @@ FROM hub.lumigame.com/base/dotnet/core/aspnet:9.0-alpine
 WORKDIR /app
 EXPOSE 5000
 ENV ASPNETCORE_URLS=http://+:5000
-COPY --from=build /app/publish .
+COPY --from=builder /app/publish .
 ENTRYPOINT ["dotnet", "PaymentAPI.Presentation.dll"]
