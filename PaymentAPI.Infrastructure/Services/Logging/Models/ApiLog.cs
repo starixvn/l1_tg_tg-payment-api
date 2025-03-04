@@ -19,7 +19,7 @@ public class ApiLog
     
     public int StatusCode { get; set; }
     
-    public Dictionary<string, string> Headers { get; set; } = new();
+    public Dictionary<string, string>? Headers { get; set; } = new();
     
     public string? IpAddress { get; set; }
     

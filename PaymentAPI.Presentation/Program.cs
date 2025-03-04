@@ -3,6 +3,7 @@ using PaymentAPI.Infrastructure.Services.Logging.Configuration;
 using Sentry.AspNetCore;
 using PaymentAPI.Infrastructure.Services.Logging.Middleware;
 using PaymentAPI.Infrastructure.Databases.Configurations.MongoDb;
+using Scalar.AspNetCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,6 +33,7 @@ var app = builder.Build();
 //}
 
 app.MapOpenApi();
+app.MapScalarApiReference();
 
 //app.UseMiddleware<ApiLoggingMiddleware>();
 
